@@ -1,0 +1,40 @@
+<template name="layout">
+
+	<div class="container">
+
+		<ul>
+			<li>
+				<a href="{{pathFor 'home'}}">首页</a>
+			</li>
+			<li>
+				<a href="{{pathFor 'business.signin'}}">商家登录</a>
+				<a href="{{pathFor 'business.signup'}}">商家注册</a>
+			</li>
+			<li>
+				<a href="{{pathFor 'backend.signin'}}">管理登录</a>
+			</li>
+		</ul>
+
+		{{#if currentUser}}
+			<ul>
+				<li>
+					<a href="{{pathFor 'backend.home'}}">后台管理</a>
+				</li>
+				<li>
+					<a href="{{pathFor 'backend.users.business.verified'}}">管理已确认商户</a>
+					<a href="{{pathFor 'backend.users.business.unverified'}}">管理未确认商户</a>
+				</li>
+				<li>
+					<a href="">{{currentUser.username}}</a>
+				</li>
+				<li>
+					<a href="javascript: Meteor.logout();">退出</a>
+				</li>
+			</ul>
+		{{/if}}
+
+		{{> yield}}
+
+	</div>
+
+</template>

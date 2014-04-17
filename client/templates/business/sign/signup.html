@@ -1,0 +1,22 @@
+<template name="business.signup">
+
+	<h1>商家注册</h1>
+	<form action="javascript:;" id="signupForm">
+		<div class="form-group">
+			<input type="text" name="username" class="form-control" placeholder="用户名" required>
+		</div>
+		<div class="form-group">
+			<input type="password" name="password" class="form-control" placeholder="密码" required>
+		</div>
+		<div class="form-group">
+			<input type="text" name="profile.displayName" class="form-control" placeholder="商家名称" required>
+		</div>
+		<div class="form-group">
+			<textarea name="profile.introduction" class="form-control" placeholder="商家介绍" rows="5" required></textarea>
+		</div>
+		<div class="form-group">
+			<input type="submit" class="btn btn-success" value="注册">
+		</div>
+	</form>
+
+</template>

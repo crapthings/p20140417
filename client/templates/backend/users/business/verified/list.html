@@ -1,0 +1,31 @@
+<template name="verifiedUsersList">
+
+	<table class="table">
+		<thead>
+			<tr>
+				<th>商家名称</th>
+				<th>用户名</th>
+				<th>管理</th>
+			</tr>
+		</thead>
+		<tbody>
+			{{#each users}}
+				{{> verifiedUserItem}}
+			{{/each}}
+		</tbody>
+	</table>
+
+</template>
+
+<template name="verifiedUserItem">
+
+	<tr>
+		<td>{{profile.displayName}}</td>
+		<td>{{username}}</td>
+		<td>
+			<a href="javascript:;" class="invalidateUser">取消认证</a>
+			<a href="javascript:;" class="removeUser">删除</a>
+		</td>
+	</tr>
+
+</template>
